@@ -1,5 +1,6 @@
 import '@styles/globals.css';
-import { Children } from 'react';
+import Nav from '@components/Nav';
+import provider from '@components/provider';
 export const metaData = {
     title : "PromptAdda" ,
     description : "discover AI prompts"
@@ -11,7 +12,11 @@ const RootLayout = ({children}) => {
             <div className='main'>
                 <div className='gradient'></div>
             </div>
-            <main className='app'>{children}</main>
+            
+            <main className='app'>
+            <Nav/>
+              {children}
+            </main>
         </body>
     </html>
   )
