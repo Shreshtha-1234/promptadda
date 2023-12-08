@@ -15,6 +15,7 @@ const Feed = () => {
         const data = await response.json();
         setPosts(data);
         setOriginal(data);
+        console.log("data" ,data);
       } catch (err) {
         console.log("error occured in fetching prompts");
       }
