@@ -17,7 +17,7 @@ const Nav = () => {
     setP();
   }, []);
   return (
-    <nav className="flex-between w-full mb-16 pt-3">
+    <nav className="flex-between w-full mb-2 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logo.svg"
@@ -46,6 +46,7 @@ const Nav = () => {
                 src={session?.user.image}
                 width={37}
                 height={37}
+                alt="user image"
                 className="rounded-full"
               ></Image>
             </Link>
@@ -75,6 +76,7 @@ const Nav = () => {
               src={session?.user.image}
               width={37}
               height={37}
+              alt="user image"
               className="rounded-full"
               onClick={() => setToggleDrop((prev) => !prev)}
             />
@@ -87,7 +89,7 @@ const Nav = () => {
                   My Profile
                 </Link>
                 <Link
-                  href="/profile"
+                  href="/create-prompt"
                   className="dropdown_link"
                   onClick={() => setToggleDrop(false)}
                 >Create Prompt
